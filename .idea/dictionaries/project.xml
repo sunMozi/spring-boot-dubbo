@@ -2,6 +2,7 @@
   <dictionary name="project">
     <words>
       <w>loadbalance</w>
+      <w>nacos</w>
       <w>roundrobin</w>
       <w>userprovider</w>
     </words>

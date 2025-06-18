@@ -1,10 +1,11 @@
-package com.module.userprovider.entity;
+package com.module.api.entity;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import lombok.Data;
 
 @Data
-public class User {
+public class User implements Serializable {
 
   private Long id;
   private String username;

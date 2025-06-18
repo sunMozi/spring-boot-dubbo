@@ -1,6 +1,7 @@
 package com.module.userprovider.mapper;
 
-import com.module.userprovider.entity.User;
+
+import com.module.api.entity.User;
 import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
