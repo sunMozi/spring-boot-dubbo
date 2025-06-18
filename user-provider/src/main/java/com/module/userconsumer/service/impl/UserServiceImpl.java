@@ -1,8 +1,8 @@
-package com.module.userprovider.service.impl;
+package com.module.userconsumer.service.impl;
 
 import com.module.api.entity.User;
 import com.module.api.entity.service.UserService;
-import com.module.userprovider.mapper.UserMapper;
+import com.module.userconsumer.mapper.UserMapper;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.apache.dubbo.config.annotation.DubboService;

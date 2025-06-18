@@ -7,30 +7,10 @@ spring:
 
 dubbo:
   application:
-    name: user-consumer
-    qos-enable: false   # \u5173\u95ED Dubbo QoS\uFF0C\u751F\u4EA7\u73AF\u5883\u53EF\u6309\u9700\u914D\u7F6E
+    name: ${spring.application.name}
   registry:
     address: nacos://127.0.0.1:8848
-    register: true      # \u5F00\u542F\u6D88\u8D39\u8005\u5411\u6CE8\u518C\u4E2D\u5FC3\u6CE8\u518C\u81EA\u8EAB
-    # subscribe: true   # \u9ED8\u8BA4true\uFF0C\u4FDD\u8BC1\u8BA2\u9605\u670D\u52A1
   consumer:
-    check: false        # \u542F\u52A8\u65F6\u4E0D\u68C0\u67E5\u670D\u52A1\u63D0\u4F9B\u8005\uFF0C\u907F\u514D\u542F\u52A8\u963B\u585E
-    # timeout: 5000     # \u8C03\u7528\u8D85\u65F6\uFF0C\u53EF\u6839\u636E\u4E1A\u52A1\u8C03\u6574
-    # retries: 2        # \u91CD\u8BD5\u6B21\u6570\uFF0C\u4F01\u4E1A\u7EA7\u53EF\u914D\u7F6E
-  protocol:
-    port: -1
-
-
-# \u5176\u4ED6\u5EFA\u8BAE\u914D\u7F6E\uFF08\u53EF\u9009\uFF09\uFF1A
-# dubbo.protocol:
-#   name: dubbo
-#   port: -1            # \u7AEF\u53E3\u8BBE\u7F6E\u4E3A-1\uFF0C\u6D88\u8D39\u8005\u4E0D\u66B4\u9732\u670D\u52A1\u7AEF\u53E3
-
-# dubbo.scan:
-#   base-packages: com.module.consumer  # \u786E\u4FDD\u626B\u63CF\u6D88\u8D39\u8005\u5B9E\u73B0\u7C7B\u5305
-
-# \u65E5\u5FD7\u7EA7\u522B\u8BBE\u7F6E\uFF08\u65B9\u4FBF\u8C03\u8BD5\uFF09\uFF1A
-logging:
-  level:
-    org.apache.dubbo: DEBUG
-    com.module.consumer: DEBUG
+    timeout: 3000
+    version: 1.0.0
+    group: default

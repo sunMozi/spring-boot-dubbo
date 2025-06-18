@@ -1,4 +1,4 @@
-package com.module.userprovider.controller;
+package com.module.userconsumer.controller;
 
 import com.module.api.entity.User;
 import com.module.api.entity.service.UserService;
@@ -19,16 +19,12 @@ public class UserController {
 
   @GetMapping
   public ResponseEntity<List<User>> listUsers() {
-    List<User> users = userService.listUsers();
-    return ResponseEntity.ok(users);
+    return ResponseEntity.ok(userService.listUsers());
   }
 
   @GetMapping("/{id}")
   public ResponseEntity<User> getById(@PathVariable Long id) {
     User user = userService.getById(id);
-    if (user == null) {
-      return ResponseEntity.notFound().build();
-    }
-    return ResponseEntity.ok(user);
+    return user != null ? ResponseEntity.ok(user) : ResponseEntity.notFound().build();
   }
 }

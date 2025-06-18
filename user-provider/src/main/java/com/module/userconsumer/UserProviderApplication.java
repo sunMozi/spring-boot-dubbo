@@ -1,4 +1,4 @@
-package com.module.userprovider;
+package com.module.userconsumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

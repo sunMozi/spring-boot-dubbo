@@ -1,4 +1,4 @@
-package com.module.userprovider.mapper;
+package com.module.userconsumer.mapper;
 
 
 import com.module.api.entity.User;
