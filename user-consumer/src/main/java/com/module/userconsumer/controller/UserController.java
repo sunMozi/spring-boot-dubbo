@@ -1,7 +1,7 @@
 package com.module.userconsumer.controller;
 
 import com.module.api.entity.User;
-import com.module.api.entity.service.UserService;
+import com.module.api.service.UserService;
 import java.util.List;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.module.api.entity.service;
+package com.module.api.service;
 
 import com.module.api.entity.User;
 import java.util.List;

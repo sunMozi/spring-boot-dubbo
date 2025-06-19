@@ -7,10 +7,21 @@ spring:
 
 dubbo:
   application:
-    name: ${spring.application.name}
+    name: user-consumer
+    qos-enable: false
   registry:
     address: nacos://127.0.0.1:8848
+    register: true
+    # subscribe: true
   consumer:
-    timeout: 3000
-    version: 1.0.0
-    group: default
+    check: false
+    # timeout: 5000
+    # retries: 2
+  protocol:
+    port: -1
+
+
+logging:
+  level:
+    org.apache.dubbo: DEBUG
+    com.module.consumer: DEBUG
